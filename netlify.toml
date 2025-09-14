@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build:client"
+  command = "npm install && npm run build:client"
   functions = "netlify/functions"
   publish = "dist/spa"
 
@@ -13,3 +13,9 @@
   from = "/api/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
+
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
