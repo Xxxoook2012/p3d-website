@@ -1,0 +1,120 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 42 33% 97%; /* Off-White */
+    --foreground: 20 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 15% 15%;
+
+    --primary: 16 70% 48%; /* Terracotta Orange */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 40 60% 90%; /* Light Beige */
+    --secondary-foreground: 20 30% 20%;
+
+    --muted: 30 25% 92%;
+    --muted-foreground: 25 15% 40%;
+
+    --accent: 174 60% 48%; /* Turquoise */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 20% 88%;
+    --input: 30 20% 88%;
+    --ring: 16 70% 48%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 42 33% 97%;
+
+    --sidebar-foreground: 20 15% 20%;
+
+    --sidebar-primary: 16 70% 48%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 40 60% 90%;
+
+    --sidebar-accent-foreground: 20 30% 20%;
+
+    --sidebar-border: 30 20% 88%;
+
+    --sidebar-ring: 174 60% 48%;
+  }
+
+  .dark {
+    --background: 20 20% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 20 20% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 20 20% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 16 75% 60%;
+    --primary-foreground: 16 80% 10%;
+
+    --secondary: 40 35% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 20 15% 18%;
+    --muted-foreground: 0 0% 78%;
+
+    --accent: 174 60% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 15% 18%;
+    --input: 20 15% 18%;
+    --ring: 16 75% 60%;
+    --sidebar-background: 20 20% 8%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 16 75% 60%;
+    --sidebar-primary-foreground: 16 80% 10%;
+    --sidebar-accent: 174 60% 40%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 20 15% 18%;
+    --sidebar-ring: 16 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family:
+      "Cairo",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      Helvetica,
+      Arial,
+      "Apple Color Emoji",
+      "Segoe UI Emoji";
+  }
+}
